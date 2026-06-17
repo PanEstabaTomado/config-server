@@ -15,3 +15,7 @@ spring:
           uri: lb://libro
           predicates:
             - Path=/api/bibliotecaam/libro/**
+        - id: microserviciodonacion
+          uri: lb://microserviciodonacion
+          predicates:
+              -Path=/api/bibliotecaam/donacion/**
