@@ -8,6 +8,9 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @SpringBootApplication
 @EnableConfigServer
 @EnableDiscoveryClient
+/*
+ACTIVALO SOLO DESPUES QUE HAYAS ACTIVADO SERVICE-REGISTRY
+ */
 public class ConfigServerApplication {
 
 	public static void main(String[] args) {

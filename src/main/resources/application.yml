@@ -3,8 +3,14 @@ spring:
     name: config-server
   profiles:
     active: native
-  server:
-    port: 8097
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+server:
+  port: 8097
 
 
 eureka:

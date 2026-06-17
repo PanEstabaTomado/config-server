@@ -1,0 +1,17 @@
+server:
+  port: 8098
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8096/eureka/
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: libro
+          uri: lb://libro
+          predicates:
+            - Path=/api/bibliotecaam/libro/**
