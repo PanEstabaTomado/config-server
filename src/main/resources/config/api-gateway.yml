@@ -27,3 +27,23 @@ spring:
           uri: lb://asistencia
           predicates:
             - Path=/api/bibliotecaam/asistencia/**
+        - id: taller
+          uri: lb://taller
+          predicates:
+            - Path=/api/bibliotecaam/taller/**
+        - id: usuario
+          uri: lb://usuario
+          predicates:
+            - Path=/api/bibliotecaam/usuario/**
+        - id: compra
+          uri: lb://compra
+          predicates:
+            - Path=/api/bibliotecaam/compra/**
+        - id: prestamo
+          uri: lb://prestamo
+          predicates:
+            - Path=//api/bibliotecaam/prestamo/**
+        - id: empleado
+          uri: lb://empleado
+          predicates:
+            - Path=/api/bibliotecaam/empleado/**
