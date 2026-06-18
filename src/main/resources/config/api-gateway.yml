@@ -20,7 +20,7 @@ spring:
           predicates:
             - Path=/api/bibliotecaam/donacion/**
         - id: msresenia
-          uri: lb//msresenia
+          uri: lb://msresenia
           predicates:
             - Path=/api/bibliotecaam/resenia/**
         - id: asistencia
@@ -42,8 +42,12 @@ spring:
         - id: prestamo
           uri: lb://prestamo
           predicates:
-            - Path=//api/bibliotecaam/prestamo/**
+            - Path=/api/bibliotecaam/prestamo/**
         - id: empleado
           uri: lb://empleado
           predicates:
             - Path=/api/bibliotecaam/empleado/**
+        - id: security
+          uri: lb://security
+          predicates:
+            - Path=/api/bibliotecaam/auth/**
