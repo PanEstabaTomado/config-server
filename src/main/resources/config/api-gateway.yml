@@ -53,4 +53,4 @@ spring:
         - id: security
           uri: lb://security
           predicates:
-            - Path=/api/bibliotecaam/security/**,/api/bibliotecaam/security/swagger-ui/**,/api/bibliotecaam/security/swagger-ui.html
+            - Path=/api/bibliotecaam/security/**,/api/bibliotecaam/security/swagger-ui/**,/api/bibliotecaam/security/swagger-ui.html,/api/bibliotecaam/security/v3/api-docs/**,/api/bibliotecaam/auth/**
