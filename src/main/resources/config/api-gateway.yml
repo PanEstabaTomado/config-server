@@ -17,7 +17,10 @@ spring:
         - id: libro-docs
           uri: lb://libro
           predicates:
-            - Path=/api/bibliotecaam/libro/v3/api-docs/**,/api/bibliotecaam/libro/swagger-ui/**,/api/bibliotecaam/libro/swagger-ui.html
+            - Path=/api/bibliotecaam/libro/**
+            - Path=/api/bibliotecaam/libro/v3/api-docs/**
+            - Path=/api/bibliotecaam/libro/swagger-ui/**
+            - Path=/api/bibliotecaam/libro/swagger-ui.html
         - id: microserviciodonacion
           uri: lb://microserviciodonacion
           predicates:
@@ -53,4 +56,8 @@ spring:
         - id: security
           uri: lb://security
           predicates:
-            - Path=/api/bibliotecaam/security/**,/api/bibliotecaam/security/swagger-ui/**,/api/bibliotecaam/security/swagger-ui.html,/api/bibliotecaam/security/v3/api-docs/**,/api/bibliotecaam/auth/**
+            - Path=/api/bibliotecaam/security/**
+            - Path=/api/bibliotecaam/security/swagger-ui/**
+            - Path=/api/bibliotecaam/security/swagger-ui.html
+            - Path=/api/bibliotecaam/security/v3/api-docs/**
+            - Path=/api/bibliotecaam/auth/**
