@@ -9,105 +9,107 @@ eureka:
 spring:
   cloud:
     gateway:
-      routes:
-        - id: libro-docs
-          uri: lb://libro
-          predicates:
-            - Path=/api/bibliotecaam/libro/v3/api-docs/**
-        - id: libro
-          uri: lb://libro
-          predicates:
-            - Path=/api/bibliotecaam/libro/**
+      server:
+        webflux:
+          routes:
+            - id: libro-docs
+              uri: lb://libro
+              predicates:
+                - Path=/api/bibliotecaam/libro/v3/api-docs/**
+            - id: libro
+              uri: lb://libro
+              predicates:
+                - Path=/api/bibliotecaam/libro/**
 
-        - id: donacion-docs
-          uri: lb://microserviciodonacion
-          predicates:
-            - Path=/api/bibliotecaam/donacion/v3/api-docs/**
-        - id: donacion
-          uri: lb://microserviciodonacion
-          predicates:
-            - Path=/api/bibliotecaam/donacion/**
+            - id: donacion-docs
+              uri: lb://microserviciodonacion
+              predicates:
+                - Path=/api/bibliotecaam/donacion/v3/api-docs/**
+            - id: donacion
+              uri: lb://microserviciodonacion
+              predicates:
+                - Path=/api/bibliotecaam/donacion/**
 
-        - id: resenia-docs
-          uri: lb://msresenia
-          predicates:
-            - Path=/api/bibliotecaam/resenia/v3/api-docs/**
-        - id: resenia
-          uri: lb://msresenia
-          predicates:
-            - Path=/api/bibliotecaam/resenia/**
+            - id: resenia-docs
+              uri: lb://msresenia
+              predicates:
+                - Path=/api/bibliotecaam/resenia/v3/api-docs/**
+            - id: resenia
+              uri: lb://msresenia
+              predicates:
+                - Path=/api/bibliotecaam/resenia/**
 
-        - id: asistencia-docs
-          uri: lb://asistencia
-          predicates:
-            - Path=/api/bibliotecaam/asistencia/v3/api-docs/**
-        - id: asistencia
-          uri: lb://asistencia
-          predicates:
-            - Path=/api/bibliotecaam/asistencia/**
+            - id: asistencia-docs
+              uri: lb://asistencia
+              predicates:
+                - Path=/api/bibliotecaam/asistencia/v3/api-docs/**
+            - id: asistencia
+              uri: lb://asistencia
+              predicates:
+                - Path=/api/bibliotecaam/asistencia/**
 
-        - id: taller-docs
-          uri: lb://taller
-          predicates:
-            - Path=/api/bibliotecaam/taller/v3/api-docs/**
-        - id: taller
-          uri: lb://taller
-          predicates:
-            - Path=/api/bibliotecaam/taller/**
+            - id: taller-docs
+              uri: lb://taller
+              predicates:
+                - Path=/api/bibliotecaam/taller/v3/api-docs/**
+            - id: taller
+              uri: lb://taller
+              predicates:
+                - Path=/api/bibliotecaam/taller/**
 
-        - id: usuario-docs
-          uri: lb://usuario
-          predicates:
-            - Path=/api/bibliotecaam/usuario/v3/api-docs/**
-        - id: usuario
-          uri: lb://usuario
-          predicates:
-            - Path=/api/bibliotecaam/usuario/**
+            - id: usuario-docs
+              uri: lb://usuario
+              predicates:
+                - Path=/api/bibliotecaam/usuario/v3/api-docs/**
+            - id: usuario
+              uri: lb://usuario
+              predicates:
+                - Path=/api/bibliotecaam/usuario/**
 
-        - id: compra-docs
-          uri: lb://compra
-          predicates:
-            - Path=/api/bibliotecaam/compra/v3/api-docs/**
-        - id: compra
-          uri: lb://compra
-          predicates:
-            - Path=/api/bibliotecaam/compra/**
+            - id: compra-docs
+              uri: lb://compra
+              predicates:
+                - Path=/api/bibliotecaam/compra/v3/api-docs/**
+            - id: compra
+              uri: lb://compra
+              predicates:
+                - Path=/api/bibliotecaam/compra/**
 
-        - id: prestamo-docs
-          uri: lb://prestamo
-          predicates:
-            - Path=/api/bibliotecaam/prestamo/v3/api-docs/**
-        - id: prestamo
-          uri: lb://prestamo
-          predicates:
-            - Path=/api/bibliotecaam/prestamo/**
+            - id: prestamo-docs
+              uri: lb://prestamo
+              predicates:
+                - Path=/api/bibliotecaam/prestamo/v3/api-docs/**
+            - id: prestamo
+              uri: lb://prestamo
+              predicates:
+                - Path=/api/bibliotecaam/prestamo/**
 
-        - id: empleado-docs
-          uri: lb://empleado
-          predicates:
-            - Path=/api/bibliotecaam/empleado/v3/api-docs/**
-        - id: empleado
-          uri: lb://empleado
-          predicates:
-            - Path=/api/bibliotecaam/empleado/**
+            - id: empleado-docs
+              uri: lb://empleado
+              predicates:
+                - Path=/api/bibliotecaam/empleado/v3/api-docs/**
+            - id: empleado
+              uri: lb://empleado
+              predicates:
+                - Path=/api/bibliotecaam/empleado/**
 
-        - id: sancion-docs
-          uri: lb://sancion
-          predicates:
-            - Path=/api/bibliotecaam/sancion/v3/api-docs/**
-        - id: sancion
-          uri: lb://sancion
-          predicates:
-            - Path=/api/bibliotecaam/sancion/**
+            - id: sancion-docs
+              uri: lb://sancion
+              predicates:
+                - Path=/api/bibliotecaam/sancion/v3/api-docs/**
+            - id: sancion
+              uri: lb://sancion
+              predicates:
+                - Path=/api/bibliotecaam/sancion/**
 
-        - id: auth-docs
-          uri: lb://auth
-          predicates:
-            - Path=/api/bibliotecaam/auth/v3/api-docs/**
-        - id: auth
-          uri: lb://auth
-          predicates:
-            - Path=/api/bibliotecaam/auth/**
+            - id: auth-docs
+              uri: lb://auth
+              predicates:
+                - Path=/api/bibliotecaam/auth/v3/api-docs/**
+            - id: auth
+              uri: lb://auth
+              predicates:
+                - Path=/api/bibliotecaam/auth/**
 
 
 management:
