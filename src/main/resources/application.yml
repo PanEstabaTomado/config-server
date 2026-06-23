@@ -9,9 +9,6 @@ spring:
         native:
           search-locations: classpath:/config
 
-jwt:
-  secret: '{cipher}75b915ade36161ebaac1c4ca496b40e3a861f24098ea741871171fdb672af7aedad1aa0f0aeecd7c0d51b9e999244ecb6782cb456971fe8946122451a3240cb58bb8cc97fd64f4aba701a908a89653a94c0297aa43c81c4908207d899a36e648'
-
 
 server:
   port: 8097
