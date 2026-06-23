@@ -11,5 +11,4 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8096/eureka/
 
-jwt:
-  secret: 'YmlibGlvdGVjYWFtYmlibGlvdGVjYWFtYmlibGlvdGVjYWFtYmlibGlvdGVjYWFt'
+

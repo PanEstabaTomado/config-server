@@ -6,25 +6,25 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8096/eureka/
-
-jwt:
-  secret: 'YmlibGlvdGVjYWFtYmlibGlvdGVjYWFtYmlibGlvdGVjYWFtYmlibGlvdGVjYWFt'
-
 spring:
   cloud:
     gateway:
       routes:
-        - id: libro-docs
+        - id: libro
           uri: lb://libro
           predicates:
             - Path=/api/bibliotecaam/libro/**
-            - Path=/api/bibliotecaam/libro/v3/api-docs/**
-            - Path=/api/bibliotecaam/libro/swagger-ui/**
-            - Path=/api/bibliotecaam/libro/swagger-ui.html
+          filters:
+            - PreserveHostHeader
+            - RewritePath=api/bibliotecaam/libro/v3/api-docs, /v3/api-docs
+
         - id: microserviciodonacion
           uri: lb://microserviciodonacion
           predicates:
             - Path=/api/bibliotecaam/donacion/**
+          filters:
+            - PreserveHostHeader
+            - RewritePath=api/bibliotecaam/donacion/v3/api-docs, /v3/api-docs
         - id: msresenia
           uri: lb://msresenia
           predicates:
@@ -53,11 +53,49 @@ spring:
           uri: lb://empleado
           predicates:
             - Path=/api/bibliotecaam/empleado/**
-        - id: security
-          uri: lb://security
+        - id: sancion
+          uri: lb://sancion
           predicates:
-            - Path=/api/bibliotecaam/security/**
-            - Path=/api/bibliotecaam/security/swagger-ui/**
-            - Path=/api/bibliotecaam/security/swagger-ui.html
-            - Path=/api/bibliotecaam/security/v3/api-docs/**
+            - Path=/api/bibliotecaam/sancion/**
+        - id: auth
+          uri: lb://auth
+          predicates:
             - Path=/api/bibliotecaam/auth/**
+          filters:
+            - PreserveHostHeader
+            - RewritePath=api/bibliotecaam/auth/v3/api-docs, /v3/api-docs
+
+management:
+  endpoints:
+    web:
+        exposure:
+          include: health, info, prometheus
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: Microservicio Libro
+        url: /api/bibliotecaam/libro/v3/api-docs
+      - name: Microservicio Donacion
+        url: /api/bibliotecaam/msdonacion/v3/api-docs
+      - name: Microservicio Usuario
+        url: /api/bibliotecaam/usuario/v3/api-docs
+      - name: Microservicio Prestamo
+        url: /api/bibliotecaam/prestamo/v3/api-docs
+      - name: Microservicio Sancion
+        url: /api/bibliotecaam/sancion/v3/api-docs
+      - name: Microservicio Resenia
+        url: /api/bibliotecaam/msresenia/v3/api-docs
+      - name: Microservicio Empleado
+        url: /api/bibliotecaam/empleado/v3/api-docs
+      - name: Microservicio Taller
+        url: /api/bibliotecaam/taller/v3/api-docs
+      - name: Microservicio Asistencia
+        url: /api/bibliotecaam/asistencia/v3/api-docs
+      - name: Microservicio Compra
+        url: /api/bibliotecaam/compra/v3/api-docs
+      - name: Microservicio Seguridad
+        url: /api/bibliotecaam/auth/v3/api-docs
