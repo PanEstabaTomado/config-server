@@ -1,0 +1,17 @@
+server:
+  port: 8087
+
+spring:
+  cloud:
+    discovery:
+      enabled: true
+
+springdoc:
+  servers:
+    - url: http://localhost:8098/api/bibliotecaam/sancion
+      description: Via del Api Gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8096/eureka/
