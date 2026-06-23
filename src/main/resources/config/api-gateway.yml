@@ -20,24 +20,24 @@ spring:
             - Path=/api/bibliotecaam/libro/v3/api-docs/**
           filters:
             - StripPrefix=3
-        - id: microserviciodonacion
+        - id: donacion
           uri: lb://microserviciodonacion
           predicates:
             - Path=/api/bibliotecaam/donacion/**
         - id: donacion-docs
           uri: lb://microserviciodonacion
           predicates:
-            - Path=/api/bibliotecaam/microserviciodonacion/v3/api-docs/**
+            - Path=/api/bibliotecaam/donacion/v3/api-docs/**
           filters:
             - StripPrefix=3
-        - id: msresenia
+        - id: resenia
           uri: lb://msresenia
           predicates:
             - Path=/api/bibliotecaam/resenia/**
-        - id: msresenia-docs
+        - id: resenia-docs
           uri: lb://msresenia
           predicates:
-            - Path=/api/bibliotecaam/msresenia/v3/api-docs/**
+            - Path=/api/bibliotecaam/resenia/v3/api-docs/**
           filters:
             - StripPrefix=3
         - id: asistencia
@@ -58,6 +58,8 @@ spring:
           uri: lb://taller
           predicates:
             - Path=/api/bibliotecaam/taller/v3/api-docs/**
+          filters:
+            - StripPrefix=3
         - id: usuario
           uri: lb://usuario
           predicates:
@@ -66,6 +68,8 @@ spring:
           uri: lb://usuario
           predicates:
             - Path=/api/bibliotecaam/usuario/v3/api-docs/**
+          filters:
+            - StripPrefix=3
         - id: compra
           uri: lb://compra
           predicates:
@@ -74,6 +78,8 @@ spring:
           uri: lb://compra
           predicates:
             - Path=/api/bibliotecaam/compra/v3/api-docs/**
+          filters:
+            - StripPrefix=3
         - id: prestamo
           uri: lb://prestamo
           predicates:
@@ -82,6 +88,8 @@ spring:
           uri: lb://prestamo
           predicates:
             - Path=/api/bibliotecaam/prestamo/v3/api-docs/**
+          filters:
+            - StripPrefix=3
         - id: empleado
           uri: lb://empleado
           predicates:
@@ -90,6 +98,8 @@ spring:
           uri: lb://empleado
           predicates:
             - Path=/api/bibliotecaam/empleado/v3/api-docs/**
+          filters:
+            - StripPrefix=3
         - id: sancion
           uri: lb://sancion
           predicates:
@@ -98,6 +108,8 @@ spring:
           uri: lb://sancion
           predicates:
             - Path=/api/bibliotecaam/sancion/v3/api-docs/**
+          filters:
+            - StripPrefix=3
         - id: auth
           uri: lb://auth
           predicates:
@@ -106,6 +118,8 @@ spring:
           uri: lb://auth
           predicates:
             - Path=/api/bibliotecaam/auth/v3/api-docs/**
+          filters:
+            - StripPrefix=3
 
 management:
   endpoints:
@@ -122,7 +136,7 @@ springdoc:
       - name: Microservicio Libro
         url: /api/bibliotecaam/libro/v3/api-docs
       - name: Microservicio Donacion
-        url: /api/bibliotecaam/msdonacion/v3/api-docs
+        url: /api/bibliotecaam/donacion/v3/api-docs
       - name: Microservicio Usuario
         url: /api/bibliotecaam/usuario/v3/api-docs
       - name: Microservicio Prestamo
@@ -130,7 +144,7 @@ springdoc:
       - name: Microservicio Sancion
         url: /api/bibliotecaam/sancion/v3/api-docs
       - name: Microservicio Resenia
-        url: /api/bibliotecaam/msresenia/v3/api-docs
+        url: /api/bibliotecaam/resenia/v3/api-docs
       - name: Microservicio Empleado
         url: /api/bibliotecaam/empleado/v3/api-docs
       - name: Microservicio Taller
