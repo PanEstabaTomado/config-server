@@ -8,7 +8,7 @@ spring:
 
 springdoc:
   servers:
-    - uri: http://localhost:8098/api/bibiliotecaam/taller
+    - url: http://localhost:8098/api/bibliotecaam/taller
       description: Via del Api Gateway
 
 eureka:

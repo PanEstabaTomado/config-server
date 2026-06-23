@@ -8,7 +8,7 @@ spring:
 
 springdoc:
   servers:
-    - uri: http://localhost:8098/api/bibiliotecaam/prestamo
+    - url: http://localhost:8098/api/bibliotecaam/prestamo
       description: Via del Api Gateway
 
 eureka:

@@ -8,7 +8,7 @@ spring:
 
 springdoc:
   servers:
-    - uri: http://localhost:8098/api/bibiliotecaam/microserviciodonacion
+    - url: http://localhost:8098/api/bibliotecaam/donacion
       description: Via del Api Gateway
 
 eureka:
