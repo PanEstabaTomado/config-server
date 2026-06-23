@@ -155,3 +155,11 @@ springdoc:
         url: /api/bibliotecaam/compra/v3/api-docs
       - name: Microservicio Seguridad
         url: /api/bibliotecaam/auth/v3/api-docs
+    disable-swagger-default-url: true
+  webjars:
+    prefix: ""
+  api-docs:
+    enabled: true
+  cache:
+    disabled: true
+  enable-native-support: true
