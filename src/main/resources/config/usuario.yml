@@ -6,6 +6,11 @@ spring:
     discovery:
       enabled: true
 
+springdoc:
+  servers:
+    - uri: http://localhost:8098/api/bibiliotecaam/usuario
+      description: Via del Api Gateway
+
 eureka:
   client:
     serviceUrl:

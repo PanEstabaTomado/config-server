@@ -6,3 +6,9 @@ eureka:
     hostname: localhost
     prefer-ip-adress: false
     ip-adress: 127.0.0.1
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
