@@ -14,9 +14,6 @@ spring:
           uri: lb://libro
           predicates:
             - Path=/api/bibliotecaam/libro/**
-          filters:
-            - PreserveHostHeader
-            - RewritePath=api/bibliotecaam/libro/v3/api-docs, /v3/api-docs
 
         - id: microserviciodonacion
           uri: lb://microserviciodonacion
