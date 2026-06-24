@@ -8,7 +8,7 @@ spring:
 
 springdoc:
   servers:
-    - url: http://localhost:8098/api/bibliotecaam/compra
+    - url: http://localhost:8098
       description: Via del Api Gateway
 
 eureka:
